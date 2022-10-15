@@ -3386,20 +3386,20 @@ hr {
   padding: 10px 25px;
   padding-right: 25px;
   padding-right: 30px;
-  color: #f27420;
+  color: #ffffff;
   font-weight: 400;
   text-transform: capitalize;
   border-radius: 0px;
   background: none;
 }
 .footer-wrappr .form-wrapper input::-moz-placeholder {
-  color: #ffffff;
+  color: #670000;
 }
 .footer-wrappr .form-wrapper input:-ms-input-placeholder {
-  color: #ffffff;
+  color: #670000;
 }
 .footer-wrappr .form-wrapper input::placeholder {
-  color: #ffffff;
+  color: #670000;
 }
 .footer-wrappr .form-wrapper input .list {
   width: 100%;
@@ -3433,21 +3433,21 @@ hr {
   }
 }
 .footer-wrappr .form-wrapper textarea::-moz-placeholder {
-  color: #ffffff;
+  color: #670000;
   font-size: 16px;
   font-weight: 300;
   -moz-transition: 0.4s;
   transition: 0.4s;
 }
 .footer-wrappr .form-wrapper textarea:-ms-input-placeholder {
-  color: #ffffff;
+  color: #670000;
   font-size: 16px;
   font-weight: 300;
   -ms-transition: 0.4s;
   transition: 0.4s;
 }
 .footer-wrappr .form-wrapper textarea::placeholder {
-  color: #ffffff;
+  color: #670000;
   font-size: 16px;
   font-weight: 300;
   transition: 0.4s;

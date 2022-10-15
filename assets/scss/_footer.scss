@@ -14,13 +14,13 @@
             padding: 10px 25px;
             padding-right: 25px;
             padding-right: 30px;
-            color: $theme-color3;
+            color: $white;
             font-weight: 400;
             text-transform: capitalize;
             border-radius: 0px;
             background: none;
             &::placeholder{
-                color: $white;
+                color: $theme-color;
             }
             .list {
                 width: 100%;
@@ -48,7 +48,7 @@
                     padding: 30px 26px;
                 }
             &::placeholder {
-                    color: $white;
+                    color: $theme-color;
                     font-size: 16px;
                     font-weight: 300;
                     transition: .4s;
