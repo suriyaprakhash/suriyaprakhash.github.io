@@ -95,24 +95,34 @@
                             <!-- Hero Caption -->
                             <div class="hero__caption">
                                 <!-- <h1>SURIYA.</h1> -->
-                                <h5> 
-                                    <svg viewBox="0 0 960 300">
-                                        <symbol id="s-text">
-                                            <text text-anchor="middle" x="50%" y="80%">SURIYA. </text>
-                                            <text text-anchor="middle" x="52%" y="80%">SURIYA. </text>
-                                            <!-- <text text-anchor="middle" x="48%" y="80%">SURIYA. </text> -->
-                                        </symbol>
-                                    
-                                        <g class = "g-ants">
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                        </g>
-                                    </svg> 
-                                </h5>
 
+
+                                <div id="suriya-animation-container">
+                                    <div class="container-sun">
+                                        <svg class="svg-sun" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet">
+                                        <circle cx="50" cy="50" r="35" id="sun"></circle>
+                                        </svg>
+                                    </div>
+                                    <div id="suriya-animation">
+                                        <h5> 
+                                            <svg viewBox="0 0 960 300">
+                                                <symbol id="s-text">
+                                                    <text text-anchor="middle" x="50%" y="80%">SURIYA. </text>
+                                                    <text text-anchor="middle" x="52%" y="80%">SURIYA. </text>
+                                                </symbol>
+                                            
+                                                <g class = "g-ants">
+                                                    <use xlink:href="#s-text" class="text-copy"></use>
+                                                    <use xlink:href="#s-text" class="text-copy"></use>
+                                                    <use xlink:href="#s-text" class="text-copy"></use>
+                                                    <use xlink:href="#s-text" class="text-copy"></use>
+                                                    <use xlink:href="#s-text" class="text-copy"></use>
+                                                </g>
+                                            </svg> 
+                                        </h5>
+                                    </div>
+                                  </div>
+                                
 
                                 <p>VICE PRESIDENT</p>
                                 <p class="cd-headline letters scale">Software Engineer II at 
@@ -467,27 +477,29 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form id="contact-form" action="mailto:suriyaprakhash@gmail.com" method="POST" enctype="text/plain">
-								<!-- <form id="contact-form" action="#" method="POST"></form> -->
+                                <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfHJxo2PPDbulDA8cXWM7U_Q6NaLtG2KthKD7jrWG14D120Ww/viewform?embedded=true" class="google-iframe" width="100%" height="800px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+                                
+                                
+                                <form  action="https://docs.google.com/forms/d/e/1FAIpQLSfHJxo2PPDbulDA8cXWM7U_Q6NaLtG2KthKD7jrWG14D120Ww/formResponse" target="_blank" method="POST">
+                                    <!-- <input type="email" name="entry.1829611490" placeholder="Email">
+                                    <input type="text" name="entry.1204818314"  placeholder="Your name">
+                                    <textarea name="entry.511760122" id="message" placeholder="Message" value=""></textarea>
+                                    <button class="submit-btn2" type="submit">Send Message</button> -->
+
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6">
+                                            <div class="form-box email-icon mb-25">
+                                                <input type="email" name="entry.1829611490" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
                                             <div class="form-box user-icon mb-25">
-                                                <input type="text" name="name" placeholder="Your name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="form-box email-icon mb-25">
-                                                <input type="text" name="email" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="form-box email-icon mb-25">
-                                                <input type="text" name="email" placeholder="Subject">
+                                                <input type="name" name="entry.1204818314"  placeholder="Your name">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="form-box message-icon mb-25">
-                                                <textarea name="message" id="message" placeholder="Message"></textarea>
+                                                <textarea name="entry.511760122" id="message" placeholder="Message" value=""></textarea>
                                             </div>
                                             <div class="submit-info">
                                                 <button class="submit-btn2" type="submit">Send Message</button>
@@ -495,6 +507,7 @@
                                         </div>
                                     </div>
                                 </form> 
+                                
                             </div>
                         </div>
                     </div>
