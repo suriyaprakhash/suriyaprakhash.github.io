@@ -154,8 +154,13 @@ svg {
     .container-sun{
         opacity: 20%;
         z-index: 5;
-        top: -100%;
-        left: -90%;
+        top: -10%;
+        left: -30%;
+    }
+
+    .svg-sun{
+        width: 200px;
+        height: 200px;
     }
 
   }
