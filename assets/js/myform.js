@@ -103,7 +103,9 @@ function reveal() {
 
         // if (width < 800) {
         //     $(".sun").css({
-        //         display: none,
+        //         display: 'none',
+        //         height: '0px',
+        //         width: '0px',
         //     });
         // }  
         if(height - 600 < event.pageY && !(height - 50 < event.pageY )) {
