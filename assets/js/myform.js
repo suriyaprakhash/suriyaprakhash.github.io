@@ -106,7 +106,7 @@ function reveal() {
                 display: none
             });
         } else
-        if(height - 300 < event.pageY && !(height - 50 < event.pageY )) {
+        if(height - 600 < event.pageY && !(height - 50 < event.pageY )) {
             $(".sun").css({
                 //   left: e.pageX - 300, 
                 //   top: e.pageY - 300
@@ -115,17 +115,15 @@ function reveal() {
                 width: '100px',
                 height: '100px',
             });
-        } else if (height - 50 < event.pageY ) {
+        } else if (height - 50 < event.pageY) { // LOWER AREA
             $(".sun").css({
-                //   left: e.pageX - 300, 
-                //   top: e.pageY - 300
                 left: event.pageX - 5, 
                 top: event.pageY - 5,
                 width: '10px',
                 height: '10px',
             });
         } else
-         if (width > event.pageX + 300 && !(event.pageX < 300)) {
+         if (width > event.pageX + 600 && !(event.pageX < 600)) { // MIDDLE AREA
             $(".sun").css({
                 //   left: e.pageX - 300, 
                 //   top: e.pageY - 300
@@ -134,7 +132,7 @@ function reveal() {
                 width: '600px',
                 height: '600px',
             });
-        } else if (event.pageX < 300) { // 100 < 300
+        } else if (event.pageX < 600) { // SIDEAREA 100 < 600
             $(".sun").css({
                 left: event.pageX/2, 
                 top: event.pageY - (event.pageX/2), 
