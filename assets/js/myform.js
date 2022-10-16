@@ -32,3 +32,89 @@ function setSubmitButtonVisible(visible) {
         submitButton.style.display = "none";
     }
 }
+///////////////////////////////////////
+
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+
+
+  function sideReveal() {
+    var reveals = document.querySelectorAll(".side-reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowWidth = window.innerWidth;
+      var elementLeft = reveals[i].getBoundingClientRect().left;
+      var elementVisible = 150;
+  
+      if (elementLeft < windowWidth - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", sideReveal);
+
+///////////////////////////////////////
+(function() {
+    document.onmousemove = handleMouseMove;
+    function handleMouseMove(event) {
+        var eventDoc, doc, body;
+
+        event = event || window.event; // IE-ism
+
+        // If pageX/Y aren't available and clientX/Y are,
+        // calculate pageX/Y - logic taken from jQuery.
+        // (This is to support old IE)
+        if (event.pageX == null && event.clientX != null) {
+            eventDoc = (event.target && event.target.ownerDocument) || document;
+            doc = eventDoc.documentElement;
+            body = eventDoc.body;
+
+            event.pageX = event.clientX +
+              (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+              (doc && doc.clientLeft || body && body.clientLeft || 0);
+            event.pageY = event.clientY +
+              (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+              (doc && doc.clientTop  || body && body.clientTop  || 0 );
+        }
+
+        // Use event.pageX / event.pageY here
+            $(".sun").css({
+            //   left: e.pageX - 300, 
+            //   top: e.pageY - 300
+            left: event.pageX - 300, 
+            top: event.pageY - 300
+    });
+    }
+})();
+
+// $(document).mousemove(function(e){
+//     var eventDoc, doc, body;
+//     eventDoc = (e.target && e.target.ownerDocument) || document;
+//     doc = eventDoc.documentElement;
+//     body = eventDoc.body;
+
+//     $(".sun").css({
+//     //   left: e.pageX - 300, 
+//     //   top: e.pageY - 300
+//     left:  doc.clientLeft - e.pageX, 
+//     top:  doc.clientTop - e.pageY
+//     });
+// });

@@ -1,4 +1,4 @@
-
+/* SURIYA TEXT ANIMATION */
 svg {
     display: block;
     font: 15.5em 'Montserrat';
@@ -46,6 +46,7 @@ svg {
 }
 
 /* ///////////////////////// */
+/* SUN ANIMATION */
 
 .suriya-animation-container {
     width: 100px;
@@ -167,3 +168,89 @@ svg {
 
 
   /* ///////////////////////// */
+/* REVEAL ANIMATION */
+
+  
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .side-reveal{
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .side-reveal.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+/* ///////////////////////// */
+/* https://codepen.io/lcstep/pen/OZmqOy */
+.sun {
+    height: 600px;
+    width: 600px;
+    background: white;
+    background: radial-gradient(circle, rgba(217,17,17,1) 0%,  rgba(0,0,0,0) 40%);
+    /* background: radial-gradient(circle, rgba(217,17,17,1) 0%, rgba(253,149,45,1) 100%); */
+      /* background-size: 100%; */
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-animation: Gradient 6s ease-in-out infinite;
+    -moz-animation: Gradient 6s ease-in-out infinite;
+      animation: Gradient 6s ease-in-out infinite; 
+    position: absolute;
+    
+  }
+  
+  @-webkit-keyframes Gradient {
+      0% {
+          background-size: 50%;
+      }
+      50% {
+          background-size: 100%;
+      }
+      100% {
+          background-size: 50%;
+      }
+  }
+  
+  @-moz-keyframes Gradient {
+          0% {
+          background-size: 50%;
+      }
+      50% {
+          background-size: 100%;
+      }
+      100% {
+          background-size: 50%;
+      }
+  }
+  
+  @keyframes Gradient {
+          0% {
+          background-size: 50%;
+      }
+      50% {
+          background-size: 100%;
+      }
+      100% {
+          background-size: 50%;
+      }
+  }
+
+  /* @media (min-width: 100px) and (max-width: 1200px) { 
+    .sun {
+        background: radial-gradient(circle, rgba(217,17,17,1) 0%,  rgba(255,255,255,0) 20%);
+    }
+  } */
