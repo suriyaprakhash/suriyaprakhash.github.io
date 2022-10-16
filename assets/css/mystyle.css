@@ -200,8 +200,9 @@ svg {
 .sun {
     height: 600px;
     width: 600px;
-    background: white;
-    background: radial-gradient(circle, rgba(217,17,17,1) 0%,  rgba(0,0,0,0) 40%);
+    /* background: white; */
+    /* background: radial-gradient(circle, rgba(217,17,17,1) 0%,  rgba(0,0,0,0) 40%); */
+    background-image: url('/assets/img/logo/loder.png');
     /* background: radial-gradient(circle, rgba(217,17,17,1) 0%, rgba(253,149,45,1) 100%); */
       /* background-size: 100%; */
       background-repeat: no-repeat;
@@ -210,7 +211,7 @@ svg {
     -moz-animation: Gradient 6s ease-in-out infinite;
       animation: Gradient 6s ease-in-out infinite; 
     position: absolute;
-    
+
   }
   
   @-webkit-keyframes Gradient {
@@ -218,7 +219,7 @@ svg {
           background-size: 50%;
       }
       50% {
-          background-size: 100%;
+          background-size: 80%; 
       }
       100% {
           background-size: 50%;
@@ -230,7 +231,7 @@ svg {
           background-size: 50%;
       }
       50% {
-          background-size: 100%;
+          background-size: 80%;
       }
       100% {
           background-size: 50%;
@@ -238,14 +239,28 @@ svg {
   }
   
   @keyframes Gradient {
-          0% {
+      0% {
           background-size: 50%;
+          -webkit-transform: rotate3d(0, 0, 1, 0deg);
+          transform: rotate3d(0, 0, 1, 0deg);
+      }
+      25% {
+        -webkit-transform: rotate3d(0, 0, 1, 90deg);
+        transform: rotate3d(0, 0, 1, 90deg);
       }
       50% {
-          background-size: 100%;
+          background-size: 80%;
+          -webkit-transform: rotate3d(0, 0, 1, 180deg);
+          transform: rotate3d(0, 0, 1, 180deg);
+      }
+      75% {
+        -webkit-transform: rotate3d(0, 0, 1, 270deg);
+        transform: rotate3d(0, 0, 1, 270deg);
       }
       100% {
           background-size: 50%;
+          -webkit-transform: rotate3d(0, 0, 1, 360deg);
+          transform: rotate3d(0, 0, 1, 360deg);
       }
   }
 
@@ -257,4 +272,32 @@ svg {
   @media (min-width: 100px) and (max-width: 1200px) { 
  
     body { cursor: url('/assets/img/logo/logo2_footerss.png') -300 -300, crosshair }
+  }
+
+  .rotate { /* not used for time being */
+    -webkit-animation: rotate 5s normal linear infinite;
+    animation: rotate 5s normal linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+    25% {
+      -webkit-transform: rotate3d(0, 0, 1, 90deg);
+      transform: rotate3d(0, 0, 1, 90deg);
+    }
+    50% {
+      -webkit-transform: rotate3d(0, 0, 1, 180deg);
+      transform: rotate3d(0, 0, 1, 180deg);
+    }
+    75% {
+      -webkit-transform: rotate3d(0, 0, 1, 270deg);
+      transform: rotate3d(0, 0, 1, 270deg);
+    }
+    100% {
+      -webkit-transform: rotate3d(0, 0, 1, 360deg);
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
   }
