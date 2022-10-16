@@ -195,6 +195,14 @@ svg {
     opacity: 1;
   }
 
+  
+  @media (min-width: 100px) and (max-width: 1200px) { 
+    .side-reveal{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
 /* ///////////////////////// */
 /* https://codepen.io/lcstep/pen/OZmqOy */
 .sun {
