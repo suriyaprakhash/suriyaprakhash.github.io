@@ -2933,7 +2933,7 @@ hr {
   }
 }
 .about-area::before {
-  position: absolute;
+  position: none;
   content: "";
   width: 100%;
   height: 27%;
