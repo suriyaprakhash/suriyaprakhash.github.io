@@ -101,13 +101,12 @@ function reveal() {
         // Use event.pageX / event.pageY here
         // 1500 > 1300 + 300
 
-        // if (width < 800) {
-        //     $(".sun").css({
-        //         display: 'none',
-        //         height: '0px',
-        //         width: '0px',
-        //     });
-        // }  
+        if (width < 1200) {
+              $(".sun").css({
+                display: 'none',
+            });
+            
+        } else
         if(height - 600 < event.pageY && !(height - 50 < event.pageY )) {
             $(".sun").css({
                 //   left: e.pageX - 300, 

@@ -285,7 +285,7 @@ svg {
     /* ///////////////////////// */
 /* CURSOR ANIMATION */
 
-  /* body { cursor: url('/assets/img/logo/logo2_footerss.png') -300 -300, none } */
+  body { cursor: url('/assets/img/logo/logo2_footerss.png') -300 -300, none }
 
   @media (min-width: 100px) and (max-width: 1200px) { 
     body { cursor: url('/assets/img/logo/logo2_footerss.png') 0 0, crosshair }
