@@ -77,6 +77,9 @@ function reveal() {
     function handleMouseMove(event) {
         var eventDoc, doc, body;
 
+        var height = document.body.clientHeight;
+        var width = document.body.clientWidth;
+
         event = event || window.event; // IE-ism
 
         // If pageX/Y aren't available and clientX/Y are,
@@ -96,12 +99,59 @@ function reveal() {
         }
 
         // Use event.pageX / event.pageY here
+        // 1500 > 1300 + 300
+
+        if (width < 800) {
             $(".sun").css({
-            //   left: e.pageX - 300, 
-            //   top: e.pageY - 300
-            left: event.pageX - 300, 
-            top: event.pageY - 300
-    });
+                display: none
+            });
+        } else
+        if(height - 300 < event.pageY && !(height - 50 < event.pageY )) {
+            $(".sun").css({
+                //   left: e.pageX - 300, 
+                //   top: e.pageY - 300
+                left: event.pageX - 50, 
+                top: event.pageY - 50,
+                width: '100px',
+                height: '100px',
+            });
+        } else if (height - 50 < event.pageY ) {
+            $(".sun").css({
+                //   left: e.pageX - 300, 
+                //   top: e.pageY - 300
+                left: event.pageX - 5, 
+                top: event.pageY - 5,
+                width: '10px',
+                height: '10px',
+            });
+        } else
+         if (width > event.pageX + 300 && !(event.pageX < 300)) {
+            $(".sun").css({
+                //   left: e.pageX - 300, 
+                //   top: e.pageY - 300
+                left: event.pageX - 300, 
+                top: event.pageY - 300,
+                width: '600px',
+                height: '600px',
+            });
+        } else if (event.pageX < 300) { // 100 < 300
+            $(".sun").css({
+                left: event.pageX/2, 
+                top: event.pageY - (event.pageX/2), 
+                width: event.pageX + 'px', //100px
+                height: event.pageX + 'px', //100px
+            });
+        }
+        else {
+            $(".sun").css({
+                //   left: e.pageX - 300, 
+                //   top: e.pageY - 300
+                left: event.pageX - (width - event.pageX)/2, // (1500 - 1300) / 2 = 200/2 = 100  
+                top:  event.pageY - (width - event.pageX)/2, //
+                width: (width - event.pageX) + 'px', //1500 - 1300 = 200px
+                height: (width - event.pageX) + 'px', //1500 - 1300 = 200px
+            });
+        }
     }
 })();
 

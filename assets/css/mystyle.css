@@ -249,8 +249,12 @@ svg {
       }
   }
 
-  /* @media (min-width: 100px) and (max-width: 1200px) { 
-    .sun {
-        background: radial-gradient(circle, rgba(217,17,17,1) 0%,  rgba(255,255,255,0) 20%);
-    }
-  } */
+    /* ///////////////////////// */
+/* CURSOR ANIMATION */
+
+  body { cursor: url('/assets/img/logo/logo2_footerss.png') -300 -300, none }
+
+  @media (min-width: 100px) and (max-width: 1200px) { 
+ 
+    body { cursor: url('/assets/img/logo/logo2_footerss.png') -300 -300, crosshair }
+  }

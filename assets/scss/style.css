@@ -2922,16 +2922,6 @@ hr {
   position: relative;
   position: relative;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .about-area {
-    margin-right: 50px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .about-area {
-    margin-right: 50px;
-  }
-}
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .about-area {
     margin-right: 0px;
