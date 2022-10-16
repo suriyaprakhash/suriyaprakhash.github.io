@@ -202,7 +202,7 @@ svg {
       opacity: 1;
     }
   }
-
+ 
 /* ///////////////////////// */
 /* https://codepen.io/lcstep/pen/OZmqOy */
 .sun {
@@ -290,14 +290,30 @@ svg {
   @media (min-width: 100px) and (max-width: 1200px) { 
     body { cursor: url('/assets/img/logo/logo2_footerss.png') 0 0, crosshair }
     .sun {
-      background-image: url(''); 
+      /* background-image: url(''); 
       display: none;
       height: 0px;
-      width: 0px;
+      width: 0px; */
     }
   }
 
+  @media (min-width: 100px) and (max-width: 600px) { 
+    .sun {
+      /* background-image: url(''); 
+      display: none;*/
+      height: 300px;
+      width: 200px; 
+    }
+  }
 
+  @media (min-width: 600px) and (max-width: 1200px) { 
+    .sun {
+      /* background-image: url(''); 
+      display: none;*/
+      height: 400px;
+      width: max-width; 
+    }
+  }
 
 
     /* ///////////////////////// */
