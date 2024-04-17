@@ -10,7 +10,18 @@ $( document ).ready(function() {
       const formData = new FormData(form);
       const object = Object.fromEntries(formData);
       const json = JSON.stringify(object);
+      const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+      if (!hCaptcha) {
+          e.preventDefault();
+          setTimeout(() => {
+            result.innerHTML = "Please fill out captcha field"
+          }, 3000);
+          return
+      }
+      
       result.innerHTML = "Please wait..."
+
       //fetch result
       fetch('https://api.web3forms.com/submit', {
               method: 'POST',

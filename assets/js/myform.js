@@ -15,6 +15,13 @@ function validateForm() {
     var email = document.getElementById("form-email").value;
     var name = document.getElementById("form-name").value;
     var message = document.getElementById("form-message").value;
+    // const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    // if (!hCaptcha) {
+    //     e.preventDefault();
+    //     result.innerHTML = "Please fill out captcha field"
+    //     return
+    // }
     if (validateEmail(email) && email.length > 0 && name.length > 0 && message.length > 0) {
         setSubmitButtonVisible(true);
     } else {
