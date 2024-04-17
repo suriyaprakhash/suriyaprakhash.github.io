@@ -611,7 +611,8 @@
                                 <!-- <form
                                     action="https://docs.google.com/forms/d/e/1FAIpQLSfHJxo2PPDbulDA8cXWM7U_Q6NaLtG2KthKD7jrWG14D120Ww/formResponse"
                                     target="_blank" method="POST"> -->
-                                <form id="my-form" action="https://api.web3forms.com/submit" target="_blank" method="POST">
+                                <form id="my-form" action="https://api.web3forms.com/submit" target="_blank"
+                                    method="POST">
                                     <!-- <input type="email" name="entry.1829611490" placeholder="Email">
                                     <input type="text" name="entry.1204818314"  placeholder="Your name">
                                     <textarea name="entry.511760122" id="message" placeholder="Message" value=""></textarea>
@@ -622,16 +623,16 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6">
                                             <div class="form-box email-icon mb-25">
-                                                <input id="form-email" type="email" name="email"
-                                                    onkeyup="validateForm()" required>
+                                                <input id="form-email" type="email" name="email" style="color: white;"
+                                                    onkeyup="validateForm()" placeholder="Email" required>
                                                 <!-- <input id="form-email" type="email" name="entry.1829611490"
                                                     onkeyup="validateForm()" placeholder="Email"> -->
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-6">
-                                            <div class="form-box user-icon mb-25">
+                                            <div class="form-box user-icon mb-25" style="color: white;">
                                                 <input id="form-name" type="text" name="name" onkeyup="validateForm()"
-                                                    required>
+                                                    placeholder="Your name" required>
 
                                                 <!-- <input id="form-name" type="name" name="entry.1204818314"
                                                     onkeyup="validateForm()" placeholder="Your name"> -->
@@ -640,15 +641,22 @@
                                         <div class="col-lg-12">
                                             <div class="form-box message-icon mb-25">
                                                 <textarea id="form-message" name="message" onkeyup="validateForm()"
-                                                    required></textarea>
+                                                    placeholder="Message" required></textarea>
                                                 <!-- <textarea id="form-message" name="entry.511760122" id="message"
                                                     onkeyup="validateForm()" placeholder="Message" value=""></textarea> -->
                                             </div>
+
+                                            <!--hCaptcha-->
+                                            <div class="h-captcha" data-captcha="true"></div>
 
                                             <div class="submit-info">
                                                 <button id="submit-button" class="submit-btn2" style="display: none;"
                                                     type="submit">Send Message</button>
                                             </div>
+
+                                            <!--Response-->
+                                            <div id="form-result" style="color: white;"></div>
+
                                         </div>
                                     </div>
                                 </form>
@@ -734,7 +742,10 @@
     <script src="./assets/js/hover-direction-snake.min.js"></script>
 
     <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
+    <!--This is for hCaptcha-->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="./assets/js/contact-us.js"></script>
+    <!-- <script src="./assets/js/contact.js"></script> -->
     <script src="./assets/js/jquery.form.js"></script>
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/mail-script.js"></script>
