@@ -10,6 +10,7 @@ const validateEmail = (email) => {
     );
   };
 
+
 function validateForm() {
     var email = document.getElementById("form-email").value;
     var name = document.getElementById("form-name").value;
