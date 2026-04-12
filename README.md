@@ -1,7 +1,7 @@
-- 👋 Hi, I'm a [Suriya](https://www.suriyaprakhash.com)
-- :man_office_worker: Software Engineer III at [M&T Bank](https://www3.mtb.com/)
-- :computer: I have *end to end experience* in *planning*, *building* and *maintaing* **Software products** and **Web based applications** 
-- 👀 I’m interested in Technology, Writing and Open Source
-- 🌱 I have always been in *the learning process* on a daily basis given *the type of work I do*.
+- 👋 Hi, I'm [Suriya](https://www.suriyaprakhash.com)
+- 🏢 Apps Dev Sr. Manager at [Citi](https://www.citi.com/)
+- 🧪 Exploring at [Engineering Labs](https://labs.suriyaprakhash.com) — experimental, public, and open-source projects
+- 💻 I have *end to end experience* in *planning*, *building* and *maintaining* **Software products** and **Web based applications** - 👀 I’m interested in Technology, Writing and Open Source
+- 🌱 I am in *the learning process* on a daily basis given *the type of work I do*.
 - 💞️ I’m looking to collaborate on *Open Source software*
 - 📫 [Let's talk](https://www.suriyaprakhash.com/#contact)
