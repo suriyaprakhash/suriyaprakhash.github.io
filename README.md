@@ -1,4 +1,4 @@
-- 👋 Hi, I'm a [Suriya](https://www.suriyaprakhash.com/resume/detailed.pdf)
+- 👋 Hi, I'm a [Suriya](https://www.suriyaprakhash.com)
 - :man_office_worker: Software Engineer III at [M&T Bank](https://www3.mtb.com/)
 - :computer: I have *end to end experience* in *planning*, *building* and *maintaing* **Software products** and **Web based applications** 
 - 👀 I’m interested in Technology, Writing and Open Source
