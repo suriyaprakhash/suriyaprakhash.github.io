@@ -59,6 +59,96 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+  reveal();
+
+  function moveAboutLandscape() {
+    var landscape = document.querySelector(".about-landscape");
+    var about = document.querySelector("#about");
+
+    if (!landscape || !about) {
+      return;
+    }
+
+    var progress = (window.innerHeight - about.getBoundingClientRect().top) / (window.innerHeight + about.offsetHeight);
+    var clampedProgress = Math.max(-0.2, Math.min(1.2, progress));
+    landscape.style.setProperty("--landscape-far", (clampedProgress * -18) + "px");
+    landscape.style.setProperty("--landscape-mid", (clampedProgress * -34) + "px");
+    landscape.style.setProperty("--landscape-reeds", (clampedProgress * -52) + "px");
+    landscape.style.setProperty("--landscape-water", (clampedProgress * 24) + "px");
+  }
+
+  window.addEventListener("scroll", moveAboutLandscape);
+  moveAboutLandscape();
+
+  function moveExperienceCollage() {
+    var collage = document.querySelector(".experience-collage");
+    var experience = document.querySelector("#exp-edu");
+
+    if (!collage || !experience) {
+      return;
+    }
+
+    var progress = (window.innerHeight - experience.getBoundingClientRect().top) / (window.innerHeight + experience.offsetHeight);
+    var stamps = collage.querySelectorAll(".city-stamp");
+
+    for (var i = 0; i < stamps.length; i++) {
+      stamps[i].style.setProperty("--city-shift", (progress * (i + 1) * -12) + "px");
+    }
+
+    var stones = document.querySelectorAll(".stone-block");
+    for (var j = 0; j < stones.length; j++) {
+      stones[j].style.setProperty("--stone-shift", (progress * (j + 1) * -9) + "px");
+    }
+  }
+
+  window.addEventListener("scroll", moveExperienceCollage);
+  moveExperienceCollage();
+
+  function enableExperienceFocus() {
+    var experience = document.querySelector("#exp-edu");
+    var rows = document.querySelectorAll("#exp-edu .single-about");
+
+    if (!experience || !rows.length) {
+      return;
+    }
+
+    for (var i = 0; i < rows.length; i++) {
+      rows[i].addEventListener("mouseenter", function () {
+        experience.classList.add("is-focusing");
+        this.classList.add("is-focused");
+      });
+
+      rows[i].addEventListener("mouseleave", function () {
+        experience.classList.remove("is-focusing");
+        this.classList.remove("is-focused");
+      });
+    }
+  }
+
+  enableExperienceFocus();
+
+  function enableExpertiseFocus() {
+    var expertise = document.querySelector("#expertise");
+    var cards = document.querySelectorAll("#expertise .single-services");
+
+    if (!expertise || !cards.length) {
+      return;
+    }
+
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].addEventListener("mouseenter", function () {
+        expertise.classList.add("is-focusing");
+        this.classList.add("is-focused");
+      });
+
+      cards[i].addEventListener("mouseleave", function () {
+        expertise.classList.remove("is-focusing");
+        this.classList.remove("is-focused");
+      });
+    }
+  }
+
+  enableExpertiseFocus();
 
 
   function sideReveal() {
