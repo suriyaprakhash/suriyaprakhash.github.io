@@ -334,6 +334,32 @@ svg {
   z-index: 5;
 }
 
+.main-menu #navigation a {
+  overflow: hidden;
+  position: relative;
+  transition: color .3s ease, text-shadow .3s ease;
+}
+
+.main-menu #navigation a::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 239, 174, .95), transparent);
+  bottom: 3px;
+  content: '';
+  height: 2px;
+  left: -120%;
+  position: absolute;
+  transition: left .55s ease;
+  width: 100%;
+}
+
+.main-menu #navigation a:hover {
+  color: #ffe9aa;
+  text-shadow: 0 0 10px rgba(255, 225, 145, .8);
+}
+
+.main-menu #navigation a:hover::after {
+  left: 120%;
+}
+
 .slider-area {
   position: relative;
   overflow: hidden;
