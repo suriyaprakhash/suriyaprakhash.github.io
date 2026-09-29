@@ -7,6 +7,13 @@
     <title> Suriya | Protfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.addEventListener('error', function (event) {
+            if (event.target.tagName === 'IMG') {
+                event.target.hidden = true;
+            }
+        }, true);
+    </script>
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
@@ -311,7 +318,7 @@
                     <div class="col-lg-6">
                         <div class="about-img reveal">
                             <div class="about-portrait">
-                                <img src="/assets/img/mypicture.jpg" alt="Suriya Prakhash">
+                                <img src="/assets/img/mypicture.jpg" alt="Suriya Prakhash" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -343,11 +350,11 @@
         <!--? May-about Start -->
         <div id="exp-edu" class="may-about section-padding40">
             <div class="experience-collage" aria-hidden="true">
-                <span class="city-stamp city-chennai"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80" alt="Temple in Chennai"></span>
-                <span class="city-stamp city-buffalo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Buffalo%20City%20Hall.jpg" alt="Buffalo City Hall"></span>
-                <span class="city-stamp city-dearborn"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Henry%20Ford%20Museum.jpg" alt="Henry Ford Museum"></span>
-                <span class="city-stamp city-toronto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/CN%20Tower.jpg" alt="CN Tower"></span>
-                <span class="city-stamp city-chicago"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80" alt="Chicago skyline"></span>
+                <span class="city-stamp city-chennai"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80" alt="Temple in Chennai" loading="lazy" decoding="async"></span>
+                <span class="city-stamp city-buffalo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Buffalo%20City%20Hall.jpg" alt="Buffalo City Hall" loading="lazy" decoding="async"></span>
+                <span class="city-stamp city-dearborn"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Henry%20Ford%20Museum.jpg" alt="Henry Ford Museum" loading="lazy" decoding="async"></span>
+                <span class="city-stamp city-toronto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/CN%20Tower.jpg" alt="CN Tower" loading="lazy" decoding="async"></span>
+                <span class="city-stamp city-chicago"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80" alt="Chicago skyline" loading="lazy" decoding="async"></span>
             </div>
             <div class="experience-stones" aria-hidden="true">
                 <span class="stone-block stone-left stone-left-one"></span>
@@ -475,7 +482,7 @@
                     </div>
                     <div class="col-lg-12 reveal">
                         <div class="education-place-picture">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Sivakasi_fireworks1.jpg" alt="Sivakasi fireworks, Tamil Nadu">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Sivakasi_fireworks1.jpg" alt="Sivakasi fireworks, Tamil Nadu" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="col-xl-12 reveal">
@@ -521,36 +528,36 @@
                 <span class="expertise-bird bird-six"></span>
             </div>
             <div class="expertise-logo-cloud" aria-hidden="true">
-                <span class="tech-mark tech-java"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"></span>
-                <span class="tech-mark tech-spring"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"></span>
-                <span class="tech-mark tech-angular"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular"></span>
-                <span class="tech-mark tech-kubernetes"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"></span>
-                <span class="tech-mark tech-openshift"><img src="https://cdn.simpleicons.org/redhatopenshift" alt="OpenShift"></span>
-                <span class="tech-mark tech-docker"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"></span>
-                <span class="tech-mark tech-jenkins"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"></span>
-                <span class="tech-mark tech-gitlab"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab"></span>
-                <span class="tech-mark tech-github"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></span>
-                <span class="tech-mark tech-aws"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"></span>
-                <span class="tech-mark tech-sql"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server"></span>
-                <span class="tech-mark tech-kafka"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka"></span>
-                <span class="tech-mark tech-otel"><img src="https://cdn.simpleicons.org/opentelemetry" alt="OpenTelemetry"></span>
-                <span class="tech-mark tech-oauth"><img src="https://cdn.simpleicons.org/oauth" alt="OAuth"></span>
-                <span class="tech-mark tech-activiti"><img src="https://cdn.simpleicons.org/activiti" alt="Activiti"></span>
-                <span class="tech-mark tech-mqtt"><img src="https://cdn.simpleicons.org/mqtt" alt="MQTT"></span>
-                <span class="tech-mark tech-jms"><img src="https://cdn.simpleicons.org/apache" alt="JMS"></span>
-                <span class="tech-mark tech-dynatrace"><img src="https://cdn.simpleicons.org/dynatrace" alt="Dynatrace"></span>
-                <span class="tech-mark tech-kibana"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kibana/kibana-original.svg" alt="Kibana"></span>
-                <span class="tech-mark tech-grafana"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana"></span>
-                <span class="tech-mark tech-apache"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Apache"></span>
-                <span class="tech-mark tech-nginx"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx"></span>
-                <span class="tech-mark tech-react"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></span>
-                <span class="tech-mark tech-oracle"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle"></span>
-                <span class="tech-mark tech-mongodb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"></span>
-                <span class="tech-mark tech-python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></span>
-                <span class="tech-mark tech-intellij"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" alt="IntelliJ IDEA"></span>
-                <span class="tech-mark tech-mac"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="macOS"></span>
-                <span class="tech-mark tech-windows"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows"></span>
-                <span class="tech-mark tech-linux"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"></span>
+                <span class="tech-mark tech-java"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-spring"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-angular"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-kubernetes"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-openshift"><img src="https://cdn.simpleicons.org/redhatopenshift" alt="OpenShift" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-docker"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-jenkins"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-gitlab"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-github"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-aws"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-sql"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-kafka"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-otel"><img src="https://cdn.simpleicons.org/opentelemetry" alt="OpenTelemetry" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-oauth"><img src="https://cdn.simpleicons.org/oauth" alt="OAuth" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-activiti"><img src="https://cdn.simpleicons.org/activiti" alt="Activiti" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mqtt"><img src="https://cdn.simpleicons.org/mqtt" alt="MQTT" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-jms"><img src="https://cdn.simpleicons.org/apache" alt="JMS" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-dynatrace"><img src="https://cdn.simpleicons.org/dynatrace" alt="Dynatrace" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-kibana"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kibana/kibana-original.svg" alt="Kibana" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-grafana"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-apache"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Apache" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-nginx"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-react"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-oracle"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mongodb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-intellij"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" alt="IntelliJ IDEA" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mac"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="macOS" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-windows"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-linux"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" loading="lazy" decoding="async"></span>
             </div>
             <div class="container">
                 <div class="rwo">
