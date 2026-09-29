@@ -210,7 +210,7 @@ svg {
     width: 600px;
     /* background: white; */
     /* background: radial-gradient(circle, rgba(217,17,17,1) 0%,  rgba(0,0,0,0) 40%); */
-    background-image: url('/assets/img/logo/loder.png');
+    background-image: url('/assets/img/logo/loder.webp');
     /* background: radial-gradient(circle, rgba(217,17,17,1) 0%, rgba(253,149,45,1) 100%); */
       /* background-size: 100%; */
       background-repeat: no-repeat;
@@ -641,6 +641,26 @@ svg {
   z-index: 2;
 }
 
+.about-area .about-caption .about-intro {
+  font-size: 36px;
+}
+
+.about-intro-emphasis {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+@media (max-width: 575px) {
+  .about-area .about-caption .about-intro {
+    font-size: 23px;
+    line-height: 1.4;
+  }
+
+  .about-intro-emphasis {
+    font-size: 20px;
+  }
+}
+
 .about-landscape {
   inset: 0;
   overflow: hidden;
@@ -778,6 +798,10 @@ svg {
 .about-portrait {
   overflow: hidden;
   position: relative;
+}
+
+img:not([data-image-loaded]) {
+  visibility: hidden;
 }
 
 .about-portrait > img {
@@ -1473,6 +1497,23 @@ svg {
   text-shadow: none;
 }
 
+@media (max-width: 575px) {
+  #expertise .single-services {
+    padding: 24px 22px 22px;
+  }
+
+  #expertise .single-services .services-cap h5 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  #expertise .single-services .services-cap p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
 @keyframes expertise-card-shine {
   0% { opacity: 0; transform: translateX(-120%) skewX(-20deg); }
   20% { opacity: .8; }
@@ -1484,17 +1525,6 @@ svg {
   filter: blur(2px);
   opacity: .3;
 }
-
-#expertise .single-services:nth-of-type(1) { --card-tilt: -1.5deg; --card-x: -5px; }
-#expertise .single-services:nth-of-type(2) { --card-tilt: 1deg; --card-x: 4px; --card-y: 8px; }
-#expertise .single-services:nth-of-type(3) { --card-tilt: -1deg; --card-x: 2px; }
-#expertise .single-services:nth-of-type(4) { --card-tilt: 1.5deg; --card-x: -4px; --card-y: -6px; }
-#expertise .single-services:nth-of-type(5) { --card-tilt: -1deg; --card-x: 5px; --card-y: 5px; }
-#expertise .single-services:nth-of-type(6) { --card-tilt: 1deg; --card-x: -3px; }
-#expertise .single-services:nth-of-type(7) { --card-tilt: -1.5deg; --card-x: 4px; --card-y: -5px; }
-#expertise .single-services:nth-of-type(8) { --card-tilt: 1deg; --card-x: -5px; --card-y: 6px; }
-#expertise .single-services:nth-of-type(9) { --card-tilt: -1deg; --card-x: 2px; }
-#expertise .single-services:nth-of-type(10) { --card-tilt: 1.5deg; --card-x: -3px; --card-y: -4px; }
 
 .expertise-logo-cloud {
   inset: 0;
@@ -1512,9 +1542,11 @@ svg {
 }
 
 .tech-mark img {
+  animation: tech-spin var(--tech-spin-duration, 42s) linear infinite var(--tech-spin-direction, normal);
   display: block;
   height: clamp(48px, 5.5vw, 96px);
   object-fit: contain;
+  transform-origin: center;
   width: clamp(48px, 5.5vw, 96px);
 }
 
@@ -1549,9 +1581,77 @@ svg {
 .tech-windows { left: 2%; top: 61%; --tech-tilt: 11deg; animation-delay: -7s; }
 .tech-linux { right: 32%; top: 4%; --tech-tilt: -11deg; animation-delay: -6s; }
 
+.tech-mark-added {
+  animation-duration: 7s;
+  animation-name: tech-float-added;
+  opacity: .16;
+}
+.tech-mark-added img { height: 40px; width: 40px; }
+.tech-mark-monogram {
+  animation: tech-spin var(--tech-spin-duration, 42s) linear infinite var(--tech-spin-direction, normal);
+  align-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font-size: 10px;
+  font-weight: 700;
+  height: 38px;
+  justify-content: center;
+  transform-origin: center;
+  width: 38px;
+}
+.tech-maven { left: 5%; top: 15%; --tech-tilt: -8deg; animation-delay: -1s; }
+.tech-gradle { left: 28%; top: 15%; --tech-tilt: 10deg; animation-delay: -3s; }
+.tech-sonarqube { left: 45%; top: 21%; --tech-tilt: -6deg; animation-delay: -5s; }
+.tech-checkmarx { right: 27%; top: 15%; --tech-tilt: 8deg; animation-delay: -7s; }
+.tech-blackduck { right: 3%; top: 14%; --tech-tilt: -10deg; animation-delay: -9s; }
+.tech-antigravity { left: 9%; top: 36%; --tech-tilt: 7deg; animation-delay: -2s; }
+.tech-mcp { left: 45%; top: 34%; --tech-tilt: -12deg; animation-delay: -4s; }
+.tech-lombok { right: 16%; top: 31%; --tech-tilt: 9deg; animation-delay: -6s; }
+.tech-spotbugs { right: 46%; top: 35%; --tech-tilt: -7deg; animation-delay: -8s; }
+.tech-jprofiler { left: 2%; top: 59%; --tech-tilt: 12deg; animation-delay: -1s; }
+.tech-hibernate { left: 22%; top: 43%; --tech-tilt: -9deg; animation-delay: -3s; }
+.tech-flyway { left: 43%; top: 55%; --tech-tilt: 6deg; animation-delay: -5s; }
+.tech-liquibase { right: 7%; top: 49%; --tech-tilt: -11deg; animation-delay: -7s; }
+.tech-swagger { right: 30%; top: 56%; --tech-tilt: 8deg; animation-delay: -9s; }
+.tech-postman { left: 58%; top: 43%; --tech-tilt: -5deg; animation-delay: -2s; }
+.tech-quarkus { right: 2%; top: 70%; --tech-tilt: 11deg; animation-delay: -4s; }
+.tech-micronaut { left: 17%; top: 75%; --tech-tilt: -8deg; animation-delay: -6s; }
+.tech-micrometer { left: 36%; top: 64%; --tech-tilt: 13deg; animation-delay: -8s; }
+.tech-prometheus { right: 17%; top: 77%; --tech-tilt: -6deg; animation-delay: -1s; }
+.tech-graalvm { left: 55%; top: 55%; --tech-tilt: 9deg; animation-delay: -3s; }
+.tech-rabbitmq { right: 42%; top: 57%; --tech-tilt: -12deg; animation-delay: -5s; }
+.tech-helm { right: 0%; top: 88%; --tech-tilt: 6deg; animation-delay: -7s; }
+.tech-testcontainers { left: 3%; top: 88%; --tech-tilt: -10deg; animation-delay: -9s; }
+.tech-jfr { left: 27%; top: 83%; --tech-tilt: 8deg; animation-delay: -2s; }
+.tech-jmc { right: 23%; top: 88%; --tech-tilt: -7deg; animation-delay: -4s; }
+.tech-sdkman { left: 16%; top: 17%; --tech-tilt: 12deg; animation-delay: -6s; }
+.tech-copilot { left: 79%; top: 26%; --tech-tilt: -9deg; animation-delay: -8s; }
+.tech-caffeine { right: 0%; top: 34%; --tech-tilt: 5deg; animation-delay: -1s; }
+.tech-hazelcast { right: 48%; top: 27%; --tech-tilt: -11deg; animation-delay: -3s; }
+.tech-spring-cloud { left: 61%; top: 81%; --tech-tilt: 7deg; animation-delay: -5s; }
+
 @keyframes tech-float {
-  from { margin-top: -8px; }
-  to { margin-top: 8px; }
+  from { margin-top: -8px; transform: translateX(-8px) rotate(var(--tech-tilt, 0deg)); }
+  to { margin-top: 8px; transform: translateX(8px) rotate(var(--tech-tilt, 0deg)); }
+}
+
+@keyframes tech-float-added {
+  from { margin-top: -10px; transform: translate(-10px, -3px) rotate(var(--tech-tilt, 0deg)); }
+  to { margin-top: 10px; transform: translate(10px, 3px) rotate(var(--tech-tilt, 0deg)); }
+}
+
+@keyframes tech-spin {
+  to { transform: rotate(1turn); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-mark,
+  .tech-mark img,
+  .tech-mark-monogram {
+    animation: none !important;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1559,7 +1659,8 @@ svg {
     height: 46px;
     width: 46px;
   }
-
+  .tech-mark-added img { height: 32px; width: 32px; }
+  .tech-mark-monogram { height: 30px; width: 30px; }
 }
 
 /* Animation */
@@ -1583,4 +1684,16 @@ svg {
 @keyframes animated-cursor{
   from{border-bottom-color: rgba(0,255,0,.75);}
   to{border-bottom-color: transparent;}
+}
+
+@media (max-width: 575px) {
+  .about-area .typewriter-parent {
+    animation-name: about-typewriter-mobile;
+    font-size: 48px;
+  }
+
+  @keyframes about-typewriter-mobile {
+    from { width: 0; }
+    to { width: 150px; }
+  }
 }

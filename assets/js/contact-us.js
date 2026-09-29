@@ -3,6 +3,8 @@ $( document ).ready(function() {
 
     const form = document.getElementById('my-form');
     const result = document.getElementById('form-result');
+
+    form.addEventListener('input', validateForm);
     
     //on submit, POST to web3Forms and get response
     form.addEventListener('submit', function(e) {
@@ -34,9 +36,14 @@ $( document ).ready(function() {
           .then(async (response) => {//show response
               let json = await response.json();
               console.log(json);
-              if (response.status == 200) {
+              if (response.status == 200 && json.success) {
                   result.innerHTML = json.message;
                   result.classList.add("notice--success");
+                  form.reset();
+                  if (window.hcaptcha && typeof window.hcaptcha.reset === 'function') {
+                      window.hcaptcha.reset();
+                  }
+                  setSubmitButtonVisible(false);
               } else {
                   console.log(response);
                   result.innerHTML = json.message;
@@ -50,8 +57,7 @@ $( document ).ready(function() {
               result.classList.add("notice--danger");
     
           })
-          .then(function() {//reset form
-              form.reset();
+          .then(function() {
               //make response dissapear after 3 seconds if you wish
               setTimeout(() => {
                 result.style.display = "none";

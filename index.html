@@ -8,6 +8,16 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
+        document.addEventListener('load', function (event) {
+            if (event.target.tagName === 'IMG') {
+                var image = event.target;
+                image.decode().then(function () {
+                    image.dataset.imageLoaded = 'true';
+                }).catch(function () {
+                    image.hidden = true;
+                });
+            }
+        }, true);
         document.addEventListener('error', function (event) {
             if (event.target.tagName === 'IMG') {
                 event.target.hidden = true;
@@ -66,7 +76,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
+                    <img src="assets/img/logo/loder.webp" alt="">
                 </div>
             </div>
         </div>
@@ -81,7 +91,7 @@
                         <div class="logo">
                             <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
                             <!-- <a href="index.html" ><h3>SURIYA</h3></a> -->
-                            <a href="index.html"><img src="assets/img/logo/loder.png" width="50" height="50"></a>
+                            <a href="index.html"><img src="assets/img/logo/loder.webp" width="50" height="50"></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
@@ -272,13 +282,11 @@
                                 </div>
                                 <!-- <h2>About</h2> -->
                             </div>
-                            <p class="reveal" style="font-size: 36px;">I have been <b class="color-in-para"
-                                    style="font-size: 28px; font-weight: 800; box-shadow: 5px">{DESIGNING}</b> and
-                                <b class="color-in-para"
-                                    style="font-size: 28px; font-weight: 800; box-shadow: 5px">{DEVELOPING}</b> software
+                            <p class="reveal about-intro">I have been <b class="color-in-para about-intro-emphasis">{DESIGNING}</b> and
+                                <b class="color-in-para about-intro-emphasis">{DEVELOPING}</b> software
                                 applications
                                 for <i class="color-in-para">more than a <span
-                                        style="font-size: 28px; font-weight: 800; box-shadow: 5px">decade<span></i>
+                                        class="about-intro-emphasis">decade<span></i>
                                 now ...
                             </p>
                             <!-- primarily in the <i class="color-in-para" style="font-size: 16px;">healthcare</i>,<i class="color-in-para" style="font-size: 22px;">
@@ -558,6 +566,36 @@
                 <span class="tech-mark tech-mac"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="macOS" loading="lazy" decoding="async"></span>
                 <span class="tech-mark tech-windows"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" loading="lazy" decoding="async"></span>
                 <span class="tech-mark tech-linux"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-maven"><img src="https://cdn.simpleicons.org/apachemaven" alt="Apache Maven" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-gradle"><img src="https://cdn.simpleicons.org/gradle" alt="Gradle" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-sonarqube"><img src="https://cdn.simpleicons.org/sonarqubeserver" alt="SonarQube" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-checkmarx"><img src="https://cdn.simpleicons.org/checkmarx" alt="Checkmarx" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-blackduck"><span class="tech-mark-monogram">BD</span></span>
+                <span class="tech-mark tech-mark-added tech-antigravity"><span class="tech-mark-monogram">AG</span></span>
+                <span class="tech-mark tech-mark-added tech-mcp"><img src="https://cdn.simpleicons.org/modelcontextprotocol" alt="Model Context Protocol" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-lombok"><span class="tech-mark-monogram">LO</span></span>
+                <span class="tech-mark tech-mark-added tech-spotbugs"><span class="tech-mark-monogram">SB</span></span>
+                <span class="tech-mark tech-mark-added tech-jprofiler"><span class="tech-mark-monogram">JP</span></span>
+                <span class="tech-mark tech-mark-added tech-hibernate"><img src="https://cdn.simpleicons.org/hibernate" alt="Hibernate" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-flyway"><img src="https://cdn.simpleicons.org/flyway" alt="Flyway" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-liquibase"><img src="https://cdn.simpleicons.org/liquibase" alt="Liquibase" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-swagger"><img src="https://cdn.simpleicons.org/swagger" alt="Swagger" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-postman"><img src="https://cdn.simpleicons.org/postman" alt="Postman" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-quarkus"><img src="https://cdn.simpleicons.org/quarkus" alt="Quarkus" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-micronaut"><span class="tech-mark-monogram">MN</span></span>
+                <span class="tech-mark tech-mark-added tech-micrometer"><span class="tech-mark-monogram">MM</span></span>
+                <span class="tech-mark tech-mark-added tech-prometheus"><img src="https://cdn.simpleicons.org/prometheus" alt="Prometheus" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-graalvm"><span class="tech-mark-monogram">GVM</span></span>
+                <span class="tech-mark tech-mark-added tech-rabbitmq"><img src="https://cdn.simpleicons.org/rabbitmq" alt="RabbitMQ" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-helm"><img src="https://cdn.simpleicons.org/helm" alt="Helm" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-testcontainers"><span class="tech-mark-monogram">TC</span></span>
+                <span class="tech-mark tech-mark-added tech-jfr"><span class="tech-mark-monogram">JFR</span></span>
+                <span class="tech-mark tech-mark-added tech-jmc"><span class="tech-mark-monogram">JMC</span></span>
+                <span class="tech-mark tech-mark-added tech-sdkman"><span class="tech-mark-monogram">SDK</span></span>
+                <span class="tech-mark tech-mark-added tech-copilot"><img src="https://cdn.simpleicons.org/githubcopilot" alt="GitHub Copilot" loading="lazy" decoding="async"></span>
+                <span class="tech-mark tech-mark-added tech-caffeine"><span class="tech-mark-monogram">CAF</span></span>
+                <span class="tech-mark tech-mark-added tech-hazelcast"><span class="tech-mark-monogram">HZ</span></span>
+                <span class="tech-mark tech-mark-added tech-spring-cloud"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Cloud" loading="lazy" decoding="async"></span>
             </div>
             <div class="container">
                 <div class="rwo">
@@ -947,6 +985,70 @@
 
     <script src="./assets/js/myform.js"></script>
 
+    <script>
+        (function () {
+            var cloud = document.querySelector('.expertise-logo-cloud');
+            if (!cloud) {
+                return;
+            }
+
+            var marks = Array.prototype.slice.call(cloud.querySelectorAll('.tech-mark'));
+            var cards = Array.prototype.slice.call(document.querySelectorAll('#expertise .single-services'));
+            var resizeTimer;
+
+            cards.forEach(function (card) {
+                card.style.setProperty('--card-tilt', ((Math.random() * 4) - 2).toFixed(2) + 'deg');
+                card.style.setProperty('--card-x', ((Math.random() * 6) - 3).toFixed(1) + 'px');
+                card.style.setProperty('--card-y', ((Math.random() * 6) - 3).toFixed(1) + 'px');
+            });
+
+            function arrangeMarks() {
+                var cloudWidth = cloud.clientWidth;
+                var cloudHeight = cloud.clientHeight;
+                if (!cloudWidth || !cloudHeight) {
+                    return;
+                }
+
+                var minimumCellWidth = window.innerWidth <= 575 ? 88 : 128;
+                var columns = Math.max(1, Math.min(12, Math.floor(cloudWidth / minimumCellWidth)));
+                var rows = Math.ceil(marks.length / columns);
+                var cellWidth = cloudWidth / columns;
+                var cellHeight = cloudHeight / rows;
+                var cellPadding = 24;
+                var slots = marks.map(function (mark, index) { return index; });
+
+                for (var index = slots.length - 1; index > 0; index--) {
+                    var swapIndex = Math.floor(Math.random() * (index + 1));
+                    var slot = slots[index];
+                    slots[index] = slots[swapIndex];
+                    slots[swapIndex] = slot;
+                }
+
+                marks.forEach(function (mark, markIndex) {
+                    var bounds = mark.getBoundingClientRect();
+                    var slotIndex = slots[markIndex];
+                    var column = slotIndex % columns;
+                    var row = Math.floor(slotIndex / columns);
+                    var horizontalSpace = Math.max(0, cellWidth - bounds.width - cellPadding * 2);
+                    var verticalSpace = Math.max(0, cellHeight - bounds.height - cellPadding * 2);
+                    var left = column * cellWidth + cellPadding + horizontalSpace * Math.random();
+                    var top = row * cellHeight + cellPadding + verticalSpace * Math.random();
+
+                    mark.style.left = left + 'px';
+                    mark.style.right = 'auto';
+                    mark.style.top = top + 'px';
+                    mark.style.setProperty('--tech-spin-duration', (32 + Math.random() * 28) + 's');
+                    mark.style.setProperty('--tech-spin-direction', Math.random() < 0.5 ? 'normal' : 'reverse');
+                });
+            }
+
+            arrangeMarks();
+            window.addEventListener('resize', function () {
+                window.clearTimeout(resizeTimer);
+                resizeTimer = window.setTimeout(arrangeMarks, 180);
+            });
+        })();
+    </script>
 
     <!-- <script type="text/javascript" src="js/jquery.1.11.1.js"></script> -->
 
