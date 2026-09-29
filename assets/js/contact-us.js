@@ -1,4 +1,22 @@
 //contact-us.js
+function reloadContactCaptcha() {
+    var captcha = document.querySelector('#my-form .h-captcha');
+    if (!captcha || !window.hcaptcha) {
+        return;
+    }
+
+    var widgetId = window.contactCaptchaWidgetId;
+    var sitekey = captcha.dataset.sitekey;
+
+    if (widgetId !== null && typeof window.hcaptcha.remove === 'function') {
+        window.hcaptcha.remove(widgetId);
+        captcha.replaceChildren();
+        window.contactCaptchaWidgetId = window.hcaptcha.render(captcha, { sitekey: sitekey });
+    } else if (typeof window.hcaptcha.reset === 'function') {
+        window.hcaptcha.reset(widgetId || undefined);
+    }
+}
+
 $( document ).ready(function() {
 
     const form = document.getElementById('my-form');
@@ -40,9 +58,7 @@ $( document ).ready(function() {
                   result.innerHTML = json.message;
                   result.classList.add("notice--success");
                   form.reset();
-                  if (window.hcaptcha && typeof window.hcaptcha.reset === 'function') {
-                      window.hcaptcha.reset();
-                  }
+                  reloadContactCaptcha();
                   setSubmitButtonVisible(false);
               } else {
                   console.log(response);

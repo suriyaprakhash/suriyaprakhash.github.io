@@ -869,7 +869,7 @@
                                             </div>
 
                                             <!--hCaptcha-->
-                                            <div class="h-captcha" data-captcha="true"></div>
+                                            <div class="h-captcha" data-captcha="true" data-onload="onContactCaptchaReady" data-render="explicit"></div>
 
 
 
@@ -970,6 +970,17 @@
 
     <!-- contact js -->
     <!--This is for hCaptcha-->
+    <script>
+        window.contactCaptchaWidgetId = null;
+        window.onContactCaptchaReady = function () {
+            var captcha = document.querySelector('#my-form .h-captcha');
+            if (captcha && window.hcaptcha) {
+                window.contactCaptchaWidgetId = window.hcaptcha.render(captcha, {
+                    sitekey: captcha.dataset.sitekey
+                });
+            }
+        };
+    </script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="./assets/js/contact-us.js"></script>
     <!-- <script src="./assets/js/contact.js"></script> -->
