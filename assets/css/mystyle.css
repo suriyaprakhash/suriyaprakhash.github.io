@@ -615,6 +615,9 @@ svg {
   .cloud-near-one,
   .cloud-mid-two { display: none; }
 
+  .hero-tree { display: none; }
+  .sun { display: none; }
+
   .hero-leaves {
     bottom: -62px;
     height: 205px;
@@ -1398,19 +1401,82 @@ svg {
 }
 
 #expertise .single-services {
-  opacity: .9;
+  background: #fff;
+  isolation: isolate;
+  opacity: 1;
+  overflow: hidden;
   position: relative;
   transform: rotate(var(--card-tilt, 0deg)) translate(var(--card-x, 0px), var(--card-y, 0px));
-  transition: background-color .35s ease, filter .35s ease, opacity .35s ease, transform .45s cubic-bezier(.2,.75,.25,1), box-shadow .35s ease;
+  transition: filter .35s ease, opacity .35s ease, transform .45s cubic-bezier(.2,.75,.25,1), box-shadow .35s ease;
+}
+
+#expertise .single-services::before,
+#expertise .single-services::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+}
+
+#expertise .single-services::before {
+  background: linear-gradient(135deg, #fffdf0 0%, #fff4bd 52%, #fff9de 100%);
+  inset: 0;
+  opacity: 0;
+  transition: opacity .35s ease;
+  z-index: 0;
+}
+
+#expertise .single-services::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .85), transparent);
+  height: 100%;
+  left: -45%;
+  opacity: 0;
+  top: 0;
+  transform: translateX(-120%) skewX(-20deg);
+  width: 42%;
+  z-index: 1;
+}
+
+#expertise .single-services .services-cap {
+  position: relative;
+  z-index: 2;
 }
 
 #expertise .single-services:hover,
 #expertise .single-services.is-focused {
-  background-color: rgba(255, 239, 174, .1);
   box-shadow: 0 18px 34px rgba(25, 7, 12, .2);
-  opacity: 1;
   transform: rotate(0deg) translate(0, -8px) scale(1.045);
   z-index: 4;
+}
+
+#expertise .single-services:hover::before,
+#expertise .single-services.is-focused::before {
+  opacity: 1;
+}
+
+#expertise .single-services:hover::after,
+#expertise .single-services.is-focused::after {
+  animation: expertise-card-shine .9s ease-out;
+}
+
+#expertise .single-services:hover .services-cap h5,
+#expertise .single-services.is-focused .services-cap h5 {
+  color: #302b1b;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+#expertise .single-services:hover .services-cap p,
+#expertise .single-services:hover .services-cap b,
+#expertise .single-services.is-focused .services-cap p,
+#expertise .single-services.is-focused .services-cap b {
+  color: #443d28;
+  text-shadow: none;
+}
+
+@keyframes expertise-card-shine {
+  0% { opacity: 0; transform: translateX(-120%) skewX(-20deg); }
+  20% { opacity: .8; }
+  100% { opacity: 0; transform: translateX(430%) skewX(-20deg); }
 }
 
 #expertise.is-focusing .single-services:not(:hover),
