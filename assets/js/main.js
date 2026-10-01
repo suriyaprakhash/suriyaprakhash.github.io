@@ -11,6 +11,8 @@
     });
 
 /* 2. sticky And Scroll UP */
+  var contactSection = $('#contact');
+
     $(window).on('scroll', function () {
       var scroll = $(window).scrollTop();
       if (scroll < 400) {
@@ -20,7 +22,15 @@
         $(".header-sticky").addClass("sticky-bar");
         $('#back-top').fadeIn(500);
       }
+
+      var contactTop = contactSection.length ? contactSection.offset().top : 0;
+      var contactBottom = contactTop + contactSection.outerHeight();
+      var contactIsVisible = contactSection.length > 0 &&
+        scroll + $(window).height() > contactTop && scroll < contactBottom;
+      $('body').toggleClass('contact-active', contactIsVisible);
     });
+
+    $(window).trigger('scroll');
 
   // Scroll Up
     $('#back-top a').on("click", function () {

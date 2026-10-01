@@ -199,12 +199,15 @@ function reveal() {
         // Use event.pageX / event.pageY here
         // 1500 > 1300 + 300
 
-        if (width < 1200) {
+        if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
               $(".sun").css({
                 display: 'none',
             });
-            
-        } else
+          return;
+        }
+
+        $(".sun").css({ display: 'block' });
+
         if(height - 600 < event.pageY && !(height - 50 < event.pageY )) {
             $(".sun").css({
                 //   left: e.pageX - 300, 
